@@ -99,6 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
               'Youewewew:',
             ),
             const Text(
+              'Youewewew:',
+            ),
+            const Text(
               'You have pushed the button this many times:',
             ),
             const Text(
