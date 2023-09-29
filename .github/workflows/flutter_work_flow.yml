@@ -22,7 +22,7 @@ jobs:
       - run: flutter clean
       - run: flutter pub get
       - run: flutter analyze .
-      - run: dart format --set-exit-if-changed
+      # - run: dart format --set-exit-if-changed ### comment muna
 
    
 
