@@ -13,7 +13,7 @@ jobs:
           flutter-version: '3.10.3'
           architecture: x64
       - name: Install dependencies
-      - run: dart pub get
+      - run: flutter pub get
       # - name: flutter analyze
       # - run: flutter analyze
       # - run: |
