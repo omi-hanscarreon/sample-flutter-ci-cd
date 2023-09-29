@@ -13,5 +13,6 @@ jobs:
           channel: 'stable'
           flutter-version: '3.10.3'
       - run: flutter --version
+      - run: flutter pub get
    
 
