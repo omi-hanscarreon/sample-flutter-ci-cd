@@ -4,7 +4,7 @@ name: Sample Workflow
 jobs:
   build:
     name: Dev Pr Checker
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     container:
       image:  google/dart:latest
     steps:
