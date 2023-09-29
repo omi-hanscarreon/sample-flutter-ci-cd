@@ -13,6 +13,7 @@ jobs:
           channel: 'stable'
           flutter-version: '3.10.3'
       - run: flutter --version
+      - run: flutter pub clean
       - run: flutter pub get
       - run: flutter analyze .
       - run: dart format --set-exit-if-changed
