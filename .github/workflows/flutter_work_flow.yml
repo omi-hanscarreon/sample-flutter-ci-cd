@@ -13,12 +13,13 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.10.3'
+      - run: flutter --version
       - name: Setup Dart SDK
         uses: dart-lang/setup-dart@v1.5.1
         with:
           sdk: 2.19.6
-      - run: flutter --version
-      - run: flutter pub clean
+      - run: dart --version
+      - run: flutter clean
       - run: flutter pub get
       - run: flutter analyze .
       - run: dart format --set-exit-if-changed
