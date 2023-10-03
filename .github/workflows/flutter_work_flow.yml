@@ -22,7 +22,7 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze .
       - run: flutter test --coverage
-      - run: $ dart pub global activate coverde
+      - run: dart pub global activate coverde
       # - run: dart format --set-exit-if-changed ### comment muna
       - run: flutter pub run coverde check  $PERCENTAG_COVERAGE
 
