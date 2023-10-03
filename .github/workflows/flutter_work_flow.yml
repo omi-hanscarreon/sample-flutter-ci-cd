@@ -8,7 +8,7 @@ jobs:
     env:
       COVERAGE_CHECK: ${{ vars.PERCENTAG_COVERAGE }}
     steps:
-      - run: echo "My unknown secret is $COVERAGE_CHECK"
+#      - run: echo "My unknown secret is $COVERAGE_CHECK"
       - uses: actions/checkout@v3
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -28,7 +28,7 @@ jobs:
       - run: dart pub global activate coverde
       # - run: dart format --set-exit-if-changed ### comment muna
 #      - run: echo "My unknown secret is $MY_APP_ID"
-#      - run: flutter pub run coverde check  Number(String("${env.PERCENTAG_COVERAGE}"))
+      - run: flutter pub run coverde check $COVERAGE_CHECK
 
    
 
