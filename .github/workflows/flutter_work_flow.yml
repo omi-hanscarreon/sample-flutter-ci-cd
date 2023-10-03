@@ -6,7 +6,7 @@ jobs:
     name: Dev Pr Checker
     runs-on: ubuntu-latest
     env:
-      COVERAGE_CHECK: ${{ vars.PERCENTAG_COVERAGE }}
+      COVERAGE_CHECK: ${{ vars.PERCENTAGE_92 }}
     steps:
 #      - run: echo "My unknown secret is $COVERAGE_CHECK"
       - uses: actions/checkout@v3
