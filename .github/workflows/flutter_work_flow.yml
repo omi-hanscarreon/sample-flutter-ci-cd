@@ -6,7 +6,6 @@ jobs:
     name: Dev Pr Checker
     runs-on: ubuntu-latest
     steps:
-     
       - uses: actions/checkout@v3
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -23,7 +22,9 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze .
       - run: flutter test --coverage
+      - run: $ dart pub global activate coverde
       # - run: dart format --set-exit-if-changed ### comment muna
+      - run: flutter pub run coverde check  $PERCENTAG_COVERAGE
 
    
 
