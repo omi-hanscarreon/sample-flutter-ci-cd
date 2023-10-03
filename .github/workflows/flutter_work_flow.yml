@@ -6,7 +6,7 @@ jobs:
     name: Dev Pr Checker
     runs-on: ubuntu-latest
     env:
-      COVERAGE_CHECK: ${{ vars.PERCENTAGE_92 }}
+      COVERAGE_CHECK: ${{ vars.PERCENTAG_COVERAGE }}
     steps:
 #      - run: echo "My unknown secret is $COVERAGE_CHECK"
       - uses: actions/checkout@v3
@@ -29,6 +29,13 @@ jobs:
       # - run: dart format --set-exit-if-changed ### comment muna
 #      - run: echo "My unknown secret is $MY_APP_ID"
       - run: flutter pub run coverde check $COVERAGE_CHECK
+      - run: flutter build apk --debug
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: android APK
+          path: build/app/outputs/flutter-apk/app-debug.apk.
+          retention-days: 5
 
    
 
